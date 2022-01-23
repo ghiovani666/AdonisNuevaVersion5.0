@@ -1,0 +1,4 @@
+Se debe installar el ice
+----------------------------------------------------------------
+npm i @adonisjs/ace
+https://www.npmjs.com/package/@adonisjs/ace

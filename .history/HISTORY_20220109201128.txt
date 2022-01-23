@@ -1,0 +1,7 @@
+Se debe installar el ice
+----------------------------------------------------------------
+npm i @adonisjs/ace
+https://www.npmjs.com/package/@adonisjs/ace
+https://docs.adonisjs.com/guides/installation
+
+cuando se crea un proyecto hay que remover el node_modules para que funciones el ice

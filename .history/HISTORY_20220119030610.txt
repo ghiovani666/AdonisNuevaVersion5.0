@@ -1,0 +1,52 @@
+Se debe installar el ice
+----------------------------------------------------------------
+npm i @adonisjs/ace
+https://www.npmjs.com/package/@adonisjs/ace
+https://docs.adonisjs.com/guides/installation
+
+cuando se crea un proyecto hay que remover el node_modules para que funciones el ice
+
+
+
+<VirtualHost prueba123456.com:80>
+    ServerName prueba123456.com
+    DocumentRoot "C:/xampp/htdocs/gym"
+    <Directory "C:/xampp/htdocs/gym">
+        Require all granted
+	AllowOverride All
+    </Directory>
+	
+    ErrorLog "logs/prueba123456.com-error.log"
+    CustomLog "logs/prueba123456.com-access.log" combined
+	
+    RewriteEngine on
+    RewriteCond %{SERVER_NAME} =www.prueba123456.com [OR]
+    RewriteCond %{SERVER_NAME} =prueba123456.com
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+<VirtualHost prueba123456.com:443>
+    ServerName prueba123456.com
+    DocumentRoot "C:/xampp/htdocs/gym"
+    <Directory "C:/xampp/htdocs/gym">
+        Require all granted
+	AllowOverride All
+    </Directory>
+	
+    ErrorLog "logs/prueba123456.com-error.log"
+    CustomLog "logs/prueba123456.com-access.log" combined
+	
+    SSLEngine on
+    SSLCertificateFile "cert/prueba123456.com/server.crt"
+    SSLCertificateKeyFile "cert/prueba123456.com/server.key"
+</VirtualHost>
+
+
+https://www.youtube.com/watch?v=h7KXt4A4e1E
+https://www.youtube.com/watch?v=h7KXt4A4e1E
+
+
+-extfile v3.ext
+https://docs.adonisjs.com/guides/installation
+
+node ace serve --watch
